@@ -1,4 +1,12 @@
 import csv
+import sqlite3
+
+connection = sqlite3.connect('database.sqlite')
+try:
+    cursor = connection.cursor()
+except sqlite3.Error as e:
+    print(e)
+    exit()
 
 filename = 'data/Rounded_Device_Movement_Data.csv'
 
